@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Quicksand&family=VT323&display=swap');
+
+html, body {
+  /* margin: 0;
+  padding: 0;
+  color: white;
+  height: 100%;
+  background-color: black;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  overflow: hidden; */
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  color:white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: #121111; */
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+canvas {
+  margin-top:30px;
+  margin-bottom:20px;
+  display: block;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px;
+  width: 20%;
+  border-radius: 5px;
+  border-color: white;
+  background-color: #121111;
+  color: white;
+  font-size: 12pt;
+  margin: 20px;
+}
+
+button:hover {
+ 
+  border-color: black;
+  color: white;
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+p {
+  font-size: 12pt;
+  text-align: center;
+  padding: 20px;
+  
+}
+#canvas-container {
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+
