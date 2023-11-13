@@ -16,9 +16,9 @@ class Tile {
 }
 
 function preload() {
-  jsonData = loadJSON('json.json');
+  jsonData = loadJSON("json.json");
 
-  coolfont = ('Langar');
+  coolfont = "Langar";
 }
 
 function setup() {
@@ -40,7 +40,7 @@ function setup() {
     }
   }
 
-  let generateButton = createButton('New');
+  let generateButton = createButton("New");
   generateButton.mousePressed(generateRandomLanguage);
 
   jsonParagraph = createP();
@@ -59,17 +59,16 @@ function generateRandomLanguage() {
   background(0);
 
   let randomLanguage = getRandomLanguage();
-  let htmlContent = `<h2>Hint</h2><br> <b>${randomLanguage}</b><br>`;
+  let htmlContent = `<b>Hint:</b> ${randomLanguage}<br>`;
 
   let randomGreeting = random(jsonData[randomLanguage].greetings);
-  let greetingParts = randomGreeting.split('(');
+  let greetingParts = randomGreeting.split("(");
   let cleanGreeting = greetingParts[0].trim();
-  let delayedHtmlContent = `<i></i> ${cleanGreeting}<br>`;
+  let delayedHtmlContent = `<b>Greeting:</b> ${cleanGreeting}<br>`;
   // Display the clean greeting after 10 seconds
   setTimeout(function () {
-    
     jsonParagraph.html(delayedHtmlContent, false);
-  }, 19000);
+  }, 25000);
 
   htmlContent += "<i></i><br>";
   for (let country of jsonData[randomLanguage].countries) {
@@ -96,8 +95,7 @@ function updateTiles() {
       let x = i * w;
       let y = j * h;
       let index = i + j * cols;
-      if (tiles[index])
-        tiles[index].img.copy(source, x, y, w, h, 0, 0, w, h);
+      if (tiles[index]) tiles[index].img.copy(source, x, y, w, h, 0, 0, w, h);
     }
   }
 }
@@ -139,14 +137,14 @@ function draw() {
       let tileIndex = board[index];
       if (tileIndex > -1) {
         let img = tiles[tileIndex].img;
-        
+
         // Draw rounded rectangle with a border radius of 10
-        fill(255);
-        stroke(255);
-        strokeWeight(1);
+        fill(100);
+        stroke(50);
+        strokeWeight(0.5);
         rectMode(CENTER);
-        rect(x + w/2, y + h/2, w, h, 10);
-        
+        rect(x + w / 2, y + h / 2, w, h, 10);
+
         // Display the image with rounded corners
         image(img, x, y, w, h);
       }

@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Quicksand&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Quicksand&family=VT323&display=swap");
 
-html, body {
+html,
+body {
   /* margin: 0;
   padding: 0;
   color: white;
@@ -9,9 +10,9 @@ html, body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   overflow: hidden; */
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0;
-  color:white;
+  color: white;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -23,47 +24,57 @@ html, body {
 body {
   background-color: black;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 canvas {
-  margin-top:30px;
-  margin-bottom:20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   display: block;
 }
 
 button {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   padding: 10px;
   width: 20%;
   border-radius: 5px;
-  border-color: white;
-  background-color: #121111;
+  border-color: rgb(193, 193, 193);
+  background-color: #000000;
   color: white;
   font-size: 12pt;
   margin: 20px;
 }
 
 button:hover {
- 
-  border-color: black;
-  color: white;
+  border-color: white;
+  color: rgb(222, 222, 222);
+  background-color: rgb(22, 26, 40);
   transition-duration: 0.7s;
   cursor: pointer;
+}
+
+button:active {
+  transform: translate(4px, 4px);
 }
 
 p {
   font-size: 12pt;
   text-align: center;
-  padding: 20px;
-  
 }
+
+h1 {
+  font-size: 13pt;
+}
+
+h2 {
+  font-size: 13pt;
+}
+
 #canvas-container {
-  border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff00;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +87,10 @@ p {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  opacity: 0.1;
+  opacity: 0.05;
   z-index: -1;
 }
 
-
+b {
+  color: rgb(98, 98, 255);
+}
